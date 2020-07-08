@@ -1,0 +1,26 @@
+# Insert the parameters for downloading the fasta
+
+link_fa: "ftp://ftp.ensembl.org/pub/release-93/fasta/mus_musculus/dna/"
+file_fa: "Mus_musculus.GRCm38.dna.primary_assembly"
+
+link_gtf:  "ftp://ftp.ensembl.org/pub/release-93/gtf/mus_musculus/"
+file_gtf: "Mus_musculus.GRCm38.93"
+
+# Image of singularity
+singularity_img: "/hpcnfs/home/ieo5177/container/cellranger_3.1.0.sif"
+
+# Name of folder create as reference from Cell Ranger mkref
+ref_folder: "mm10_2"
+
+# Parameters for Cell Ranger counts
+home_folder: /hpcnfs/scratch/EO/atlas_mm_scRNA/
+out_cr_count: /hpcnfs/scratch/temporary/AR/
+
+expected_numb_cells: 5000
+loc_cores: 12
+ram_used: 64
+mem_per_core: 12
+
+# Define the name of the config .json files created before
+CLUSTER_JSON: 'cluster.json'
+SAMPLES_JSON: 'samples.json'
