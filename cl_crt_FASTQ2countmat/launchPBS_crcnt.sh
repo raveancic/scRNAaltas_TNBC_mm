@@ -13,4 +13,4 @@ snakemake -s GenerateCountv3.smk  \
 --directory /hpcnfs/scratch/EO/atlas_mm_scRNA/ \
 --configfile /hpcnfs/scratch/EO/atlas_mm_scRNA/config_new.yaml \
 --cluster-config /hpcnfs/scratch/EO/atlas_mm_scRNA/cluster.json \
---cluster "qsub -V -S /bin/sh -N {cluster.name} -m ae -M {cluster.mail} -l ncpus={cluster.ncpus} -l mem={cluster.mem}G  -o {cluster.stdout} -e {cluster.stderr} -P {cluster.project_name} -q nocg_workq"
+--cluster "qsub -V -S /bin/sh -N {cluster.name} -m abe -M {cluster.mail} -l ncpus={cluster.ncpus} -l mem={cluster.mem}G  -o {cluster.stdout} -e {cluster.stderr} -P {cluster.project_name} -q nocg_workq"
