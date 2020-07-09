@@ -20,7 +20,7 @@ It is meant to be run on a PBS cluster but can be also run locally by omitting t
 ```
 conda activate snakemake
 ```
-Then be sure to have downloaded or created a docker file with Cell Ranger and all its dependencies insisde, there are many repositories in which you can download docker i.e [here](https://hub.docker.com/).
+ Then be sure to have downloaded or created a docker file with Cell Ranger and all its dependencies insisde, there are many repositories in which you can download docker i.e [here](https://hub.docker.com/).
 
 2. Create the sample.json file with the [makeJsonSamples.py](https://github.com/raveancic/scRNAaltas_TNBC_mm/blob/master/cl_crt_FASTQ2countmat/makeJsonSamples.py) script. (The .json file are the config files that Snakemake use for parameters in commands.)
 ```
