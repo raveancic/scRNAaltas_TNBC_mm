@@ -17,22 +17,22 @@ It is meant to be run on a PBS cluster but can be also run locally by omitting t
 **Usage:**
 
 1. First [install](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) Snakemake as enviroment of conda and activate it. 
+(Be sure to have downloaded or created a docker file with Cell Ranger and all its dependencies insisde, there are many repositories in which you can download docker i.e [here](https://hub.docker.com/).)
 ```
 conda activate snakemake
 ```
- Then be sure to have downloaded or created a docker file with Cell Ranger and all its dependencies insisde, there are many repositories in which you can download docker i.e [here](https://hub.docker.com/).
 
+ 
 2. Create the sample.json file with the [makeJsonSamples.py](https://github.com/raveancic/scRNAaltas_TNBC_mm/blob/master/cl_crt_FASTQ2countmat/makeJsonSamples.py) script. (The .json file are the config files that Snakemake use for parameters in commands.)
 ```
 python makeJsonSamples.py -d [Directory in which FATSQ are stored] -o [prefix of name .json file]
 ```
 
-3. *(optional)* If you need to modify some parameters for the cluster submission (i.e: mail, RAM, CPU) you can modify the [CreateClusterJsonv2.py](https://github.com/raveancic/scRNAaltas_TNBC_mm/blob/master/cl_crt_FASTQ2countmat/CreateClusterJsonv2.py) file with a text editor and then run it. 
+3. *(optional)* If you need to modify some parameters for the cluster submission (i.e: mail, RAM, CPU) you can modify the [CreateClusterJsonv2.py](https://github.com/raveancic/scRNAaltas_TNBC_mm/blob/master/cl_crt_FASTQ2countmat/CreateClusterJsonv2.py) file with a text editor and then run it.
+(Otherwise you can directly modify the cluster.json file).
 ```
 python CreateClusterJson.py
 ```
-Otherwise you can directly modify the cluster.json file.
-
 
 3. Modify the [config_new.yaml](https://github.com/raveancic/scRNAaltas_TNBC_mm/blob/master/cl_crt_FASTQ2countmat/config_new.yaml) with your favorite text editor, here you can tune up all the parameters of interest to run all the commands (rules) that are in in the Snakemake file [GenerateCountv3.smk](https://github.com/raveancic/scRNAaltas_TNBC_mm/blob/master/cl_crt_FASTQ2countmat/GenerateCountv3.smk). It is here in which you can change the FASTA and GTF files according to your experiment (in mine there is the *Mus musculus* ref)
 
