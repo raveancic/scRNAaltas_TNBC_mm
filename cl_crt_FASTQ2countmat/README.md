@@ -2,7 +2,9 @@
 ### (a Snakemake pipeline)
 
 
-This pipeline allows to generate the count matrix (and the .bam files) from FASTQ files of scRNA generated with 10xgenomics.
+This pipeline allows to generate the count matrix (and the .bam files) from FASTQ files of scRNA generated with 10Xgenomics. The method is the one applied in [Carpen et al., 2022 *Cell Death Discov*](https://doi.org/10.1038/s41420-022-00893-x). Please if you use this pipeline cite:
+
+Carpen, L., Falvo, P., Orecchioni, S. et al. A single-cell transcriptomic landscape of innate and adaptive intratumoral immunity in triple negative breast cancer during chemo- and immunotherapies. *Cell Death Discov*. 8, 106 (2022). [https://doi.org/10.1038/s41420-022-00893-x](https://doi.org/10.1038/s41420-022-00893-x)
 
 There are two NEW features in this workflow:
 
